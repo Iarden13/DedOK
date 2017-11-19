@@ -37,8 +37,8 @@ function rand(){
 
     kol_rand++;    
     randButton.innerHTML  = "Random " +kol_rand;
-    var str = log.innerText;
-    log.innerText = str
+    
+    log.innerText = log.innerText
         +"\n"
         +"Drop №"+kol_rand
         +": "+mas[drop].id[4]
