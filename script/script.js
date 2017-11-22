@@ -1,50 +1,83 @@
-window.onload = function(){
+﻿window.onload = function(){
+    var randButton = document.getElementById("randomBUTTON");
+    var log = document.getElementById("log");
+    var drop =0;
+    var kol_rand = 0;
+    var buttonDIV = document.getElementById("randBUTTONdiv");
+    var blockScroll = document.getElementById("log");
+    var bod = document.getElementById("pageBody");
+    var nextPage = document.getElementsByClassName("page")[0];
+    var image = document.getElementsByTagName("img")[0];
+    var veight  = [0.3, 0.2, 0.1, 0.1, 0.07, 0.07, 0.05, 0.05, 0.03, 0.02, 0.01];
 
-var randButton = document.getElementById("randomBUTTON");
-var log = document.getElementById("log");
-var mas =[];
-var drop =0;
-var kol_rand = 0;
-
-for( i =0;i<11;i++){
-    mas[i] = document.getElementById("pict"+i);
-}
-
-var veight  = [0.3, 0.2, 0.1, 0.1, 0.07, 0.07, 0.05, 0.05, 0.03, 0.02, 0.01];
-
-function Choose(probs) {
-    var total = 0;
-    for (i =0; i<probs.length; i++) {
-        total += probs[i];
+    function Choose(probs) {
+        var total = 0;
+        if(!location.href.includes("2")){
+            for (i =0; i<probs.length; i++) {
+                total += probs[i];
+            }
+        }else{
+        total = (data[0]+data[1]+data[2])/(90*3);
+        }
+        
+        var randomPoint = (1-Math.random()) * (total);       
+   
+        for (i = 0; i < probs.length; i++) {
+            if (randomPoint <= probs[i])
+                return i;
+            else
+                randomPoint -= probs[i];
+        }    
+        return 10;
     }
 
-    var randomPoint = (1-Math.random()) * (total);       
-      
-    for (i = 0; i < probs.length; i++) {
-        if (randomPoint <= probs[i])
-            return i;
-        else
-            randomPoint -= probs[i];
-    }    
-    return 0;
-}
+    function rand(){
+        buttonDIV.classList.add("noVisible");  
+        setTimeout(fun,1500);
+        image.src ="";
 
-function rand(){
+        drop = Choose(veight);
 
-    mas[drop].style.display = "none";   
-    drop = Choose(veight);
-    mas[drop].style.display = "block";
-
-    kol_rand++;    
-    randButton.innerHTML  = "Random " +kol_rand;
+        image.src = "pictures/"+drop+".gif";
+        image.classList.add("animated","bounceIn");
     
-    log.innerText = log.innerText
-        +"\n"
-        +"Drop №"+kol_rand
-        +": "+mas[drop].id[4]
-        +(mas[drop].id[5]==undefined?"":mas[drop].id[5]);
-}
+        if(drop == 10){
+            bod.classList.add("animated","wobble");
+        }
 
-randButton.addEventListener('click', rand);
+        kol_rand++;    
+        randButton.innerHTML  = "Random " +kol_rand;
+    
+        var newItem = document.createElement("p");
+        newItem.innerHTML = "Drop №"+kol_rand+": "+drop;
+        newItem.className = "animated pulse " +"class"+drop;
+        log.appendChild(newItem);
+        
+        blockScroll.scrollTop = blockScroll.scrollHeight;
+    }
 
-}
+    randButton.addEventListener('click', rand);
+    nextPage.addEventListener('click', newUrl);
+
+    function newUrl(){
+        bod.classList.add("animated", "zoomOut");
+        setTimeout(urlNew,2000);
+    }
+
+    function urlNew(){
+        if(location.href.includes("2")){
+            window.location = "index.html" ;   
+        }else{
+        window.location = "index2.html" ;   
+        }        
+    }
+
+    function fun (){
+        image.classList.remove("animated","bounceIn");
+        buttonDIV.classList.remove("noVisible");
+        if(drop == 10){
+            bod.classList.remove("animated","wobble");
+        }
+    }
+
+}()

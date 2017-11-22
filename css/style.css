@@ -1,0 +1,240 @@
+.nameSecond{
+    font-size: 70px;
+
+    font-weight: normal;
+
+    font-family: "Impact", sans-serif;
+    text-shadow: 1px 1px 2px rgba(255, 238, 1, 0.836);
+    position: absolute;
+    left:700px;
+    top:50px;
+    color: rgb(240, 18, 18);
+}
+
+.name{
+    font-size: 45px;
+    line-height: 50px;
+    margin: 1em 0 .6em 0;
+    font-weight: normal;
+
+    font-family: "Mistral"/*'Hammersmith One'*/, sans-serif;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.4);
+    position: absolute;
+    transform: rotate(-45deg);
+    left:635px;
+    top:5px;
+    color: #6Cf;
+    z-index: 100;
+}
+
+.pageBodyClass{
+    background-color: #333;
+}
+
+
+
+
+a.buttons {
+    width: 150px;
+    height: 30px;
+    text-decoration: none;
+    padding-top: 9px;
+    color: #a675b3;
+    text-align: center;
+    line-height: 20px;
+    display: block;
+    margin: 20px auto;
+    font: normal 17px arial;
+    position: absolute;
+    left:700px;
+    top:600px;
+  }
+  
+  a.buttons:not(.active) {
+    box-shadow: inset 0 1px 1px rgba(111, 55, 125, 0.8), inset 0 -1px 0px rgba(63, 59, 113, 0.2), 0 9px 16px 0 rgba(0, 0, 0, 0.3), 0 4px 3px 0 rgba(0, 0, 0, 0.3), 0 0 0 1px #150a1e;
+    background-image: linear-gradient(#3b2751, #271739);
+    text-shadow: 0 0 21px rgba(223, 206, 228, 0.5), 0 -1px 0 #311d47;
+  }
+  
+  a.buttons:not(.active):hover,
+  a.buttons:not(.active):focus {
+    transition: color 200ms linear, text-shadow 500ms linear;
+    color: #fff;
+    text-shadow: 0 0 21px rgba(223, 206, 228, 0.5), 0 0 10px rgba(223, 206, 228, 0.4), 0 0 2px #2a153c;
+  }
+  a.buttons:not(:hover) {
+      transition: 2s;
+  }
+  #log{
+    font-size: 20px;
+    width: 180px;
+    height: 500px;
+    padding-left: 5px;
+     font-weight: normal;
+     font-family: "Impact", sans-serif;
+     text-shadow: 3px 3px 10px rgba(10, 11, 17, 0.555);
+     position: absolute;
+     left:1300px;
+     top:100px;
+     color: rgb(22, 156, 190);
+
+     overflow-y: auto;
+     
+  }
+
+  img{
+
+    width:200px; 
+    height:350px;
+    
+
+  }
+  .win{
+    display: block;
+  }
+
+
+  .noVisible{
+    display:none;
+
+  }
+  
+  img{
+    position: absolute;
+    left:670px;
+    top:200px;
+
+  }
+
+.class1{
+    font-size: 20px;
+    width:120px;
+     font-weight: normal;
+     font-family: "Impact", sans-serif;
+     text-shadow: 3px 3px 10px rgba(10, 11, 17, 0.555);
+     
+     color: rgb(111, 116, 117);
+}
+.class2{
+    font-size: 20px;
+    width:120px;
+    
+     font-weight: normal;
+     font-family: "Impact", sans-serif;
+     text-shadow: 3px 3px 10px rgba(10, 11, 17, 0.555);
+     
+     color: rgb(22, 156, 190);
+}
+.class3{
+    font-size: 20px;
+    width:120px;
+    
+     font-weight: normal;
+     font-family: "Impact", sans-serif;
+     text-shadow: 3px 3px 10px rgba(10, 11, 17, 0.555);
+     
+     color: rgb(22, 156, 190);
+}
+.class4{
+    font-size: 20px;
+    width:120px;
+    
+     font-weight: normal;
+     font-family: "Impact", sans-serif;
+     text-shadow: 3px 3px 10px rgba(10, 11, 17, 0.555);
+    
+     color: rgb(22, 156, 190);
+}
+.class5{
+    font-size: 20px;
+    width:120px;
+    
+     font-weight: normal;
+     font-family: "Impact", sans-serif;
+     text-shadow: 3px 3px 10px rgba(10, 11, 17, 0.555);
+     
+     color: rgb(22, 156, 190);
+}
+
+.class6{
+    font-size: 20px;
+    width:120px;
+    
+     font-weight: normal;
+     font-family: "Impact", sans-serif;
+     text-shadow: 3px 3px 10px rgba(10, 11, 17, 0.555);
+     
+     color: rgb(22, 156, 190);
+}
+.class7{
+    font-size: 20px;
+    width:120px;
+    
+     font-weight: normal;
+     font-family: "Impact", sans-serif;
+     text-shadow: 3px 3px 10px rgba(10, 11, 17, 0.555);
+     
+     color: rgb(22, 156, 190);
+}
+.class8{
+    font-size: 20px;
+    width:120px;
+    
+     font-weight: normal;
+     font-family: "Impact", sans-serif;
+     text-shadow: 3px 3px 10px rgba(36, 204, 182, 0.555);
+   
+     color: rgb(159, 190, 22);
+}
+.class9{
+    font-size: 20px;
+    width:120px;
+    
+     font-weight: normal;
+     font-family: "Impact", sans-serif;
+     text-shadow: 3px 3px 10px rgba(36, 204, 182, 0.555);
+     
+     color: rgb(190, 173, 22);
+}
+.class10{
+    font-size: 20px;
+    width:120px;
+    
+     font-weight: normal;
+     font-family: "Impact", sans-serif;
+     text-shadow: 3px 3px 10px rgba(25, 206, 176, 0.664);
+     
+     color: rgb(190, 22, 22);
+}
+.class0{
+    font-size: 20px;
+    width:120px;
+    
+     font-weight: normal;
+     font-family: "Impact", sans-serif;
+     text-shadow: 3px 3px 10px rgba(10, 11, 17, 0.555);
+     
+     color: rgb(66, 68, 68);
+}
+
+
+
+.page {
+	font-family: Verdana;
+	font-size: 3em;
+	font-weight: bold;
+	color: #FFFFFF;
+	letter-spacing: -0.11em; 
+	text-shadow: -0.05em 0px 0.07em #000000;
+}
+ 
+.page div {
+	display: inline-block;
+	color: #F00000;
+}
+.page{
+ position :absolute;
+ left:80px;
+ top:300px;
+
+}
