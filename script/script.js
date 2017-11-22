@@ -4,7 +4,6 @@
     var drop =0;
     var kol_rand = 0;
     var buttonDIV = document.getElementById("randBUTTONdiv");
-    var blockScroll = document.getElementById("log");
     var bod = document.getElementById("pageBody");
     var nextPage = document.getElementsByClassName("page")[0];
     var image = document.getElementsByTagName("img")[0];
@@ -17,10 +16,10 @@
                 total += probs[i];
             }
         }else{
-        total = (data[0]+data[1]+data[2])/(90*3);
+        total = (data[0]+data[1]+data[2])/(120*3);
         }
         
-        var randomPoint = (1-Math.random()) * (total);       
+        var randomPoint = /*(1-Math.random()) **/ (total);       
    
         for (i = 0; i < probs.length; i++) {
             if (randomPoint <= probs[i])
@@ -53,7 +52,7 @@
         newItem.className = "animated pulse " +"class"+drop;
         log.appendChild(newItem);
         
-        blockScroll.scrollTop = blockScroll.scrollHeight;
+        log.scrollTop = log.scrollHeight;
     }
 
     randButton.addEventListener('click', rand);
