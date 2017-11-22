@@ -11,15 +11,16 @@
 
     function Choose(probs) {
         var total = 0;
+        var randomPoint ;   
         if(!location.href.includes("2")){
             for (i =0; i<probs.length; i++) {
                 total += probs[i];
+                randomPoint = (1-Math.random()) * (total);   
             }
         }else{
         total = (data[0]+data[1]+data[2])/(120*3);
-        }
-        
-        var randomPoint = /*(1-Math.random()) **/ (total);       
+        randomPoint = /*(1-Math.random()) **/ (total);   
+        }     
    
         for (i = 0; i < probs.length; i++) {
             if (randomPoint <= probs[i])
