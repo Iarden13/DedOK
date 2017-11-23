@@ -7,21 +7,17 @@
     var bod = document.getElementById("pageBody");
     var nextPage = document.getElementsByClassName("page")[0];
     var image = document.getElementsByTagName("img")[0];
-    var veight  = [0.3, 0.2, 0.1, 0.1, 0.07, 0.07, 0.05, 0.05, 0.03, 0.02, 0.01];
+    var veight  = [0.3, 0.2, 0.1, 0.1, 0.07, 0.07, 0.05, 0.05, 0.03, 0.02, 0.01];   
 
-    function Choose(probs) {
-        var total = 0;
-        var randomPoint ;   
+    function Choose(probs) {          
         if(!location.href.includes("2")){
             for (i =0; i<probs.length; i++) {
                 total += probs[i];
                 randomPoint = (1-Math.random()) * (total);   
             }
-        }else{
-        total = (data[0]+data[1]+data[2])/(120*3);
-        randomPoint = /*(1-Math.random()) **/ (total);   
+        }else{        
+        randomPoint = /*(1-Math.random()) **/ (total);           
         }     
-   
         for (i = 0; i < probs.length; i++) {
             if (randomPoint <= probs[i])
                 return i;

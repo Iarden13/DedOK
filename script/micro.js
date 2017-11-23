@@ -19,12 +19,21 @@ window.onload = function(){
             source.connect(analyser);
             source.connect(processor);      
             processor.connect(ctx.destination);
-        
-            data = new Uint8Array(analyser.frequencyBinCount);   
+            
+            data = new Uint8Array(analyser.frequencyBinCount);  
+
+            analyser.fftSize = 2048;
+
+            fFrequencyData = new Float32Array(analyser.frequencyBinCount);
+            //bTimeData = new Uint8Array(analyser.frequencyBinCount);            
 
             processor.onaudioprocess = function (){
-                analyser.getByteFrequencyData(data);             
-            }        
+                analyser.getByteFrequencyData(data);
+                analyser.getFloatFrequencyData(fFrequencyData); 
+                //analyser.getByteTimeDomainData(bTimeData);
+                total = (data[0]+data[1]+data[2])/((-1)*fFrequencyData[0]*7);
+                progressBar.style = "width: "+String(total*80>140?140:total*80)+"%";                      
+            }                       
     },
     function (error) {
         alert("Ваш браузер не поддерживает данный режим");
