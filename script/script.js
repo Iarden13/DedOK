@@ -11,6 +11,7 @@
 
     function Choose(probs) {          
         if(!location.href.includes("2")){
+            total = 0;
             for (i =0; i<probs.length; i++) {
                 total += probs[i];
                 randomPoint = (1-Math.random()) * (total);   
